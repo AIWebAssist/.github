@@ -4,60 +4,27 @@ Welcome to the Browser Assistant project! This project consists of a Chrome exte
 
 ## Repository Organization
 
-### 1. [Chrome Extension Repo](https://github.com/AIWebAssist/AIWebAssistExtension)
+1. [Chrome Extension Repo](https://github.com/AIWebAssist/AIWebAssistExtension) - this repository contains the code for the Chrome extension. 
 
-This repository contains the code for the Chrome extension. The structure is organized as follows:
+2. [Backend Repo](https://github.com/AIWebAssist/AIWebAssistServer) - this repository contains the server-side logic for processing user input and web page information.
 
-- **`shared`**: Directory with the scripts that is loaded to the tab and used to extract information from the page and direct the user to the action.
+## Overall setup:
+ - We offer to work with [VScode IDE](https://code.visualstudio.com/) for both project.
 
-- **`background.js`**: Script managing background functionality.
+ - All of the setup code here is for Linux, if you are using Windows we offer to use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 
-- **`content.js`**: Script handling content-related tasks.
+ - While you may not use it, we recommend installing [docker](https://www.docker.com/products/docker-desktop/)
 
-- **`content_main.js`**: Script for the main content functionality.
+ - For developer we recommend cloning first the extension and then cloning the server and continue the setup for there.
 
-- **`main.css`**: Stylesheet for the extension.
-
-- **`main.html`**: HTML file defining the extension's main structure.
-
-- **`main.js`**: Main script for extension functionality.
-
-- **`manifest.json`**: Configuration file defining the extension's properties.
-
-### 2. [Backend Repo](https://github.com/AIWebAssist/AIWebAssistServer)
-
-This repository contains the server-side logic for processing user input and web page information. The organization is structured as follows:
-
-Files to define docker / dev container:
-- **`.devcontainer`**: Configuration for development container settings.
-
-- **`.vscode`**: VSCode-specific settings, including launch configurations.
-
-- **`Dockerfile`**: Configuration file for building a Docker image.
-  
-- **`docker-compose.yaml`**: Docker Compose configuration for easy deployment.
-
-- **`requirements-dev.txt`**: List of development dependencies.
-
-- **`requirements.txt`**: List of dependencies for the server.
-
-Main logic files:
-- **`examples`**: Directory containing usage examples.
-
-- **`scrape_anything`**: Directory that contains the entire logic to process the request.
-
-
-
-
-## Getting Started
+## Running locally.
 
 Follow these steps to set up the Browser Assistant:
 
 1. Clone the [Chrome Extension Repo](https://github.com/AIWebAssist/AIWebAssistExtension) to your local machine.
-2. TBD: Modify the backend url.
-3. Load the extension in Chrome by navigating to `chrome://extensions/` and selecting "Load unpacked." Choose the extension directory.
+3. Load the extension in Chrome by navigating to `chrome://extensions/` and selecting "Load unpacked." Choose the `extension` directory.
 4. Clone the [Backend Repo](https://github.com/AIWebAssist/AIWebAssistServer) to your local machine.
-5. TBD: start the backend using docker.
+5. Follow the instruction in the repo README.md to run the server. 
 
 ## Usage
 
